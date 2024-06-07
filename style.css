@@ -1,0 +1,111 @@
+#ballsImg {
+  width: 50%;
+  height: 50%;
+  border-radius: 60px;
+}
+#loading {
+  margin: 20% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#ballImg {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  border: 3px solid black;
+  animation-name: ball;
+  animation-duration: 3s;
+  display: none;
+}
+@keyframes ball {
+    0% {
+        transform: scale(1.5);
+      }
+}
+
+#gameName {
+  font-size: 50px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.61);
+  position: absolute;
+  top: 45%;
+  display: none;
+  animation-name: zoom;
+  animation-duration: 3s;
+}
+@keyframes zoom {
+  0% {
+    transform: scale(1.5);
+  }
+}
+#teamName {
+  position: absolute;
+  font-size: 40px;
+  padding: 10px;
+  border-radius: 4px;
+  top: 70%;
+  background-color: rgba(255, 255, 255, 0.61);
+  left: 15%;
+  display: none;
+  animation-name: team;
+  animation-duration: 3s;
+}
+@keyframes team {
+  0% {
+    transform: translate(-500px);
+  }
+}
+#continue {
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 4px;
+  position: absolute;
+  top: 90%;
+  right: 10%;
+  background-color: rgba(255, 255, 255, 0.61);
+  text-decoration: none;
+  color: black;
+  animation-name: changecolor;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  
+}
+#hover {
+  position: absolute;
+  top: 20%;
+  font-size: 50px;
+  animation-name: changecolor;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+@keyframes changecolor {
+  0% {
+    color: black;
+  }
+  50% {
+    color: rgb(255, 145, 0);
+  }
+}
+#ballsImg:hover {
+  transform: scale(2);
+  transition-duration: 3s;
+  filter: blur(3px);
+}
+#loading:hover > #hover {
+  display: none;
+}
+#loading:hover > #ballImg {
+  display:block;
+}
+#loading:hover > #gameName {
+  display: block;
+}
+#loading:hover > #teamName {
+  display: block;
+}
+
