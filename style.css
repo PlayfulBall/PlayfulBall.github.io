@@ -113,6 +113,10 @@
   font-family: snowFlake;
   src: url(fonts/snowFlake.ttf);
 }
+@font-face {
+  font-family: debazneu;
+  src: url(fonts/debazneu.ttf);
+}
 
 body {
   display: flex;
@@ -148,7 +152,7 @@ body {
     align-items: center;
     font-size: 24px;
     color: #ef6c00;
-    /* font-family: snowFlake; */
+    font-family: debazneu;
     text-shadow: 0 0 20px #ffffff;
     line-height: 0;
     transition: all 1s;
