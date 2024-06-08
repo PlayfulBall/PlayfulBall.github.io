@@ -149,22 +149,21 @@ body {
     position: absolute;
     margin-top: 50px;
     left: 250px;
-    display: flex;
     justify-content: left;
     align-items: center;
     font-size: 24px;
     color: #ef6c00;
     font-family: debazneu;
     text-shadow: 0 0 20px #ffffff;
-    line-height: 0;
     transition: all 1s;
   }
   
- ul > li {
-  display:none ;
+ ul  {
+  display:none;
   }
-  #nameCompany:hover > ul > li {
+  #nameCompany:hover > ul {
     display: block;
+    border: 1px solid black;
   }
   /* team name and members */
   a{
