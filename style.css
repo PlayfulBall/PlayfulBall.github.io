@@ -104,7 +104,7 @@
 #loading:hover > #teamName {
   display: block;
 } */
-
+/*paryan*/
 @font-face {
   font-family: yekan;
   src: url(fonts/yekan.ttf);
@@ -117,6 +117,7 @@
   font-family: debazneu;
   src: url(fonts/debazneu.ttf);
 }
+/* text font */
 
 body {
   display: flex;
@@ -124,7 +125,8 @@ body {
   align-items: center;
   padding: 50px;
   background-color: #ffffff;
-  
+}
+/* body style */
   #logoGame {
     width: 150px;
     height: 150px;
@@ -133,7 +135,7 @@ body {
     margin: 0 20%;
     transition: all 1s;
   }
-  
+  /* basketball img style */
   #nameGame {
     font-size: 44px;
     color: #ef6c00;
@@ -142,7 +144,7 @@ body {
     line-height: 0;
     transition: all 1s;
   }
-  
+  /* game name style, main text */
   #nameCompany {
     position: absolute;
     margin-top: 50px;
@@ -157,9 +159,18 @@ body {
     line-height: 0;
     transition: all 1s;
   }
+  
+ ul > li {
+  display:none ;
+  }
+  #nameCompany:hover > ul > li {
+    display: block;
+  }
+  /* team name and members */
   a{
   text-decoration: none;
   }
+  /* link items style */
   .btn {
     --color: #ef6c00;
     position: relative;
@@ -195,7 +206,7 @@ body {
     transition: 0.5s;
     opacity: 0.2;
   }
-
+/* start btn style and transition and transform */
   .btn:hover {
     cursor: pointer;
     filter: brightness(1.2);
@@ -206,7 +217,7 @@ body {
     transform: rotate(0deg);
     opacity: 1;
   }
-
+ /* start btn hover style */
   .btn svg {
     transform: translateX(-200%);
     transition: 0.5s;
@@ -220,8 +231,9 @@ body {
     transform: translateX(0%);
     opacity: 1;
   }
-
+/* start btn svg and hover style */
   .btn:active {
     filter: brightness(1.4);
   }
-}
+  /* start btn active style */
+/*paryan*/
