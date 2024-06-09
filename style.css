@@ -158,19 +158,19 @@ body {
     transition: all 1s;
   }
   
- ul {
-  color: white;
+  ul {
+    color: white;
+    padding-right: 20px;
   }
   #nameCompany:hover > ul {
-    animation-name: members;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-  }
-  @keyframes members {
-    100% {color: #ef6c00; border: 1px solid black;
-      box-shadow: 0 0 3px 5px  #b56320; transform: translateX(100px); }
+
+    color: #ef6c00; 
+    box-shadow: 0 0 3px 5px  #ef6c00; transform: translateX(100px); 
+    transition-duration: 2s;
+
   }
   /* team name and members */
+
   a{
   text-decoration: none;
   }

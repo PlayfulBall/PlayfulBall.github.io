@@ -1,108 +1,212 @@
-/* Amirhossein | Game Board | Start */
 body {
-  margin: 0 auto;
-  background-color: #dea057;
-  padding: 0;
-  #container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
+  /* Design - Body */
+  margin: 0;
+  background-color: #ef6c00;
+  animation-name: Blure;
+  animation-duration: 1s;
 
-    #GameWindow {
-      margin: 0 auto;
+  /* Design - Window */
+  > div#Window {
+    background-color: rgb(232, 232, 232);
+    transition: 1s;
+    margin: 10% auto;
+    width: 800px;
+    height: 600px;
+    box-shadow: 0px 0px 20px 0px rgba(30, 4, 122, 0.377);
+    border-radius: 60px;
+    position: relative;
+    border: 10px solid #fff;
 
-      /* 480 reselution */
-      width: 100%;
-      height: 100%;
+    &:active > img#Bounce_Ball {
+      transition: 1s;
+      transform: rotate(200deg);
+      animation: Animation 10s ease-in-out infinite;
+      /* animation-direction: alternate; */ /* Reverce mode */
+    }
+    &:active > div#Button {
+      box-shadow: 5px 5px 20px #0000002e, -5px -5px 20px 0px #ffffff,
+        inset 5px 5px 20px #0000002e, inset -5px -5px 20px 0px #ffffff;
+      transform: scale(0.95);
+      animation: Animation 1s 0 0 infinite;
+    }
 
-      #GameBall {
-        width: 50px;
-        height: 50px;
+    /* Design - Bounce Ball */
+    > img#Bounce_Ball {
+      transition: 1s;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
 
-        /* Ball | Position */
-        position: relative;
-        top: 50px;
-        left: 110px;
-        animation-name: Game_Ball;
-        animation-duration: 30s;
-        animation-iteration-count: inherit;
+      position: absolute;
+      top: 50px;
+      left: 70px;
+
+      &:hover {
+        transform: rotate(1turn);
+        left: 90px;
       }
+    }
+    > img#GameBackground {
+      border-radius: 60px;
+      filter: blur(5px);
+    }
 
-      #GamePlatform {
-        width: 125px;
-        height: 10px;
-        left: 0;
+    /* Design - Wall */
+    > div#Wall {
+      width: 160px;
+      height: 10px;
+      position: absolute;
+      top: 100px;
+      left: 0px;
+      box-shadow: 0px 0px 12px #000000, inset -1px -2px 20px 20px #915b19;
+      border-end-end-radius: 50px;
+      border-start-end-radius: 50px;
+    }
 
-        box-shadow: 0px 6px 12px #000000, inset -1px -2px 18px #915b19;
+    /* Design - Button */
+    > div#Button {
+      transition: 0.5s;
 
-        border-radius: 50px;
+      user-select: none;
 
-        /* Platform | Position */
-        position: relative;
-        top: 42.5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+
+      position: absolute;
+      left: 690px;
+      top: 10px;
+
+      box-shadow: 5px 5px 20px 0px #0000002e, -5px -5px 20px 0px #0000002e,
+        inset -5px -5px 20px 5px #ffffff21, inset 5px 5px 20px 5px #ffffff21;
+
+      /* Action - Button */
+      &:hover {
+        font-size: 32px;
+        text-shadow: 0 0 20px #0099ff;
       }
+    }
 
-      #GameCharacter {
-        width: 50px;
-        border-radius: 50%;
-        height: 50px;
+    /* Design - Earth */
+    > div#Earth {
+      width: 550px;
+      height: 50px;
+      position: absolute;
+      bottom: 0;
+      left: 40px;
 
-        /* Character | Position */
-        position: absolute;
-        top: 45.5px;
-        left: 10px;
+      box-shadow: 0px 0px 12px #000000, inset 0px 13px 20px 25px #915b19;
 
+      border-radius: 10px;
+    }
 
-        /* transition: all 5s; */
-      }
-      #GameHoop {
-        /* Hoop | Position */
-        position: relative;
-        top: 240px;
-        left: 470px;
-      }
+    /* Design - The Hole */
+    > div#The_Hole {
+      transition: 10s;
+
+      width: 100px;
+      height: 105px;
+      background-color: rgba(0, 0, 0, 0);
+      position: absolute;
+      top: 480px;
+      left: 550px;
     }
   }
 }
-/* Amirhossein | Game Board | End */
 
-
-  @keyframes Game_Character {
-    45% {
-      left: 100px;
-      transform: rotate(100deg);
-    }
+@keyframes BlackHole {
+  0% {
+    transform: rotate(0deg);
   }
-  @keyframes Game_Ball {
-    0% {
-      left: 110px;
-    }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 
-    5% {
-      left: 260px;
-      top: 500px;
-      transform: rotate(400deg) scale(1, 0.8);
-    }
-
-    11% {
-      left: 400px;
-      top: 100px;
-      transform: rotate(800deg) scale(1, 1);
-    }
-    17% {
-      left: 600px;
-      top: 500px;
-      transform: rotate(400deg) scale(1, 0.8);
-    }
-    22% {
-      left: 700px;
-      top: 200px;
-      transform: rotate(1200deg) scale(1, 1);
-    }
-    27% {
-      left: 800px;
-      top: 500px;
-      transform: rotate(400deg) scale(1, 0.8);
-    }
+@keyframes Animation {
+  /* Aninimation - Drop From Paltform 0 - 10 */
+  10% {
+    transform: translateX(80px) translateY(0px);
   }
 
+  /* Animtaion 10 - 90 */
+  20% {
+    transform: translateX(200px) translateY(450px) rotate(600deg);
+  }
+  22% {
+    transform: translateX(200px) translateY(450px) scale(1.1, 0.6);
+  }
+  23% {
+    transform: translateX(200px) translateY(450px) rotate(1000deg) scale(1);
+  }
+
+  33% {
+    transform: translateX(250px) translateY(250px);
+  }
+
+  43% {
+    transform: translateX(300px) translateY(450px) rotate(1400deg);
+  }
+  45% {
+    transform: translateX(300px) translateY(450px) scale(1.1, 0.6);
+  }
+  46% {
+    transform: translateX(300px) translateY(450px) rotate(450deg) scale(1);
+  }
+
+  56% {
+    transform: translateX(350px) translateY(325px);
+  }
+
+  66% {
+    transform: translateX(400px) translateY(450px) rotate(500deg);
+  }
+  68% {
+    transform: translateX(400px) translateY(450px) scale(1.1, 0.6);
+  }
+  69% {
+    transform: translateX(400px) translateY(450px) rotate(550deg) scale(1);
+  }
+
+  79% {
+    transform: translateX(450px) translateY(387px);
+  }
+
+  89% {
+    transform: translateX(500px) translateY(450px) rotate(600deg);
+  }
+  92% {
+    transform: translateX(500px) translateY(450px) scale(1.1, 0.6);
+    opacity: 1;
+  }
+  93% {
+    transform: translateX(500px) translateY(450px) scale(1) rotate(650deg);
+  }
+
+  /* Animation - Reset - 90 -> 100 */
+  100% {
+    transform: translateX(500px) translateY(490px);
+    opacity: 0;
+  }
+}
+
+@keyframes Blure {
+  from {
+    background-color: #000000;
+    filter: blur(100px);
+  }
+  to {
+    filter: blur(0px);
+  }
+}
+
+#The {
+  position: absolute;
+}

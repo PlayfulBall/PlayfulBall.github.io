@@ -9,51 +9,58 @@
 
   <body>
     <!-- Amirhossein | Game Board | Start-->
-    <div id="container">
-      <div id="GameWindow">
-        <img id="GameBall" src="./images/GameBall.png" alt="" />
-        <div id="GamePlatform"></div>
-        <img id="GameCharacter" src="./images/GameCharacter.jpg" alt="" />
+    <div id="Window">
+      <img
+        id="GameBackground"
+        width="100%"
+        height="100%"
+        src="images/GameBackground.jpg"
+        alt="GameBackground"
+      />
+      <img
+        id="Bounce_Ball"
+        width="24px"
+        src="images/GameBall.png"
+        alt="GameBall"
+      />
+      <div id="Wall"></div>
+      <div id="Button">Hold</div>
+      <div id="Earth"></div>
+      <div id="The_Hole">
         <svg
-          id="GameHoop"
           fill="#000000"
-          width="100px"
-          height="100px"
-          viewBox="0 0 24 24"
+          viewBox="0 0 25 25"
           id="basketball-hoop"
-          data-name="Line Color"
+          data-name="Flat Color"
           xmlns="http://www.w3.org/2000/svg"
-          class="icon line-color"
+          class="icon flat-color"
         >
-          <path
-            id="primary"
-            d="M6,12H18m0,4H6M19,8,18,20M14.33,8,14,20M9.67,8,10,20M5,8,6,20"
-            style="
-              fill: none;
-              stroke: rgb(0, 0, 0);
-              stroke-linecap: round;
-              stroke-linejoin: round;
-              stroke-width: 2;
-            "
-          ></path>
-          <rect
-            id="secondary"
-            x="3"
-            y="4"
-            width="18"
-            height="4"
-            rx="2"
-            style="
-              fill: none;
-              stroke: rgb(44, 169, 188);
-              stroke-linecap: round;
-              stroke-linejoin: round;
-              stroke-width: 2;
-            "
-          ></rect>
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              id="primary"
+              d="M19.25,5a1,1,0,0,0-1.08.92L17.75,11h-2.5l.14-5a1,1,0,0,0-1-1h0a1,1,0,0,0-1,1l-.14,5h-2.5l-.14-5a1,1,0,0,0-1-1h0a1,1,0,0,0-1,1l.14,5H6.25L5.83,5.92A1,1,0,0,0,4.75,5a1,1,0,0,0-.91,1.08L5,20.08A1,1,0,0,0,6,21h.08A1,1,0,0,0,7,19.92L6.75,17H8.92L9,20a1,1,0,0,0,1,1h0a1,1,0,0,0,1-1l-.08-3h2.16L13,20a1,1,0,0,0,1,1h0a1,1,0,0,0,1-1l.08-3h2.17L17,19.92A1,1,0,0,0,17.92,21H18a1,1,0,0,0,1-.92l1.16-14A1,1,0,0,0,19.25,5ZM6.59,15l-.17-2H8.8l.06,2Zm4.27,0,0-2h2.38l0,2Zm4.28,0,.06-2h2.38l-.17,2Z"
+              style="fill: #000000"
+            ></path>
+            <rect
+              id="secondary"
+              x="2"
+              y="3"
+              width="20"
+              height="4"
+              rx="2"
+              style="fill: #ef6c00"
+            ></rect>
+          </g>
         </svg>
       </div>
     </div>
+
     <!-- Amirhossein | Game Board | End -->
   </body>
 </html>
