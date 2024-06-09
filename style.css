@@ -163,7 +163,7 @@ body {
   }
   #nameCompany:hover > ul {
     animation-name: members;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
   }
   @keyframes members {
