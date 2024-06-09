@@ -1,69 +1,108 @@
-
 /* Amirhossein | Game Board | Start */
 body {
-    > div#container {
-        width: 700px;
-        margin: 10% auto;
-        
-        > div#GameWindow {
-            margin: 10% auto;
-            position: absolute;
-      
-            /* 480 reselution */
-            width: 640px;
-            height: 480px;
-      
-            > img#GameBackground {
-                width: 640px;
-                height: 480px;
-            }
-      
-            > img#GameBall {
-                width: 50px;
-                height: 50px;
-      
-                /* Ball | Position */
-                position: relative;
-                top: -443px;
-                left: 100px;
-            }
-            
-            > div#GamePlatform {
-                width: 150px;
-                height: 10px;
-                left: 50px;
-      
-                box-shadow:
-                    0px 0px 12px #000000,
-                    inset -1px -2px 20px #915b19;
-      
-                border-radius: 50px;
-      
-                /* Platform | Position */
-                position: relative;
-                top: -450px;
-                left: 20px;
-            }
-      
-            > img#GameCharacter {
-                width: 50px;
-                border-radius: 50%;
-                height: 50px;
-      
-                /* Character | Position */
-                position: relative;
-                top: -561px;
-                left: 10px;
-            }
-      
-            > svg#GameHoop {
-      
-                /* Hoop | Position */
-                position: relative;
-                top: -240px;
-                left: 470px;
-            }
-        }
+  margin: 0 auto;
+  background-color: #dea057;
+  padding: 0;
+  #container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+    #GameWindow {
+      margin: 0 auto;
+
+      /* 480 reselution */
+      width: 100%;
+      height: 100%;
+
+      #GameBall {
+        width: 50px;
+        height: 50px;
+
+        /* Ball | Position */
+        position: relative;
+        top: 50px;
+        left: 110px;
+        animation-name: Game_Ball;
+        animation-duration: 30s;
+        animation-iteration-count: inherit;
+      }
+
+      #GamePlatform {
+        width: 125px;
+        height: 10px;
+        left: 0;
+
+        box-shadow: 0px 6px 12px #000000, inset -1px -2px 18px #915b19;
+
+        border-radius: 50px;
+
+        /* Platform | Position */
+        position: relative;
+        top: 42.5px;
+      }
+
+      #GameCharacter {
+        width: 50px;
+        border-radius: 50%;
+        height: 50px;
+
+        /* Character | Position */
+        position: absolute;
+        top: 45.5px;
+        left: 10px;
+
+
+        /* transition: all 5s; */
+      }
+      #GameHoop {
+        /* Hoop | Position */
+        position: relative;
+        top: 240px;
+        left: 470px;
+      }
     }
   }
-  /* Amirhossein | Game Board | End */
+}
+/* Amirhossein | Game Board | End */
+
+
+  @keyframes Game_Character {
+    45% {
+      left: 100px;
+      transform: rotate(100deg);
+    }
+  }
+  @keyframes Game_Ball {
+    0% {
+      left: 110px;
+    }
+
+    5% {
+      left: 260px;
+      top: 500px;
+      transform: rotate(400deg) scale(1, 0.8);
+    }
+
+    11% {
+      left: 400px;
+      top: 100px;
+      transform: rotate(800deg) scale(1, 1);
+    }
+    17% {
+      left: 600px;
+      top: 500px;
+      transform: rotate(400deg) scale(1, 0.8);
+    }
+    22% {
+      left: 700px;
+      top: 200px;
+      transform: rotate(1200deg) scale(1, 1);
+    }
+    27% {
+      left: 800px;
+      top: 500px;
+      transform: rotate(400deg) scale(1, 0.8);
+    }
+  }
+
